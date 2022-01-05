@@ -1,0 +1,89 @@
+a {
+    text-decoration: none;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px 2px 0px black;
+    font-weight: bold;
+}
+
+.customer-menu-container {
+    flex: none;
+    width: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+.customer-menu {
+    list-style-type: none;
+    display: flex;
+    width: fit-content;
+    flex-flow: row wrap;
+    padding-top: 1ch;
+    padding: 0;
+    margin: 0;
+}
+
+.customer-menu > li {
+    border-radius: 1ch;
+    border: 2px solid #082947;
+    background: linear-gradient(360deg, #444d4d 0%, #b2d7d5 100%);
+    width: fit-content;
+    padding: 2ch;
+    padding-top: 1ch;
+    padding-bottom: 1ch;
+    margin: 1ch;
+    margin-top: 0;
+}
+
+.customer-main {
+    flex: auto;
+    width: 80%;
+    text-align: left;
+    overflow: auto;
+}
+
+.customer-table {
+    flex: none;
+    width: 100%;
+    text-align: left;
+}
+
+td,th {
+    padding: 1ch;
+}
+
+.customer-table > thead {
+    text-shadow: none;
+    height: 4ch;
+    background-color: rgb(87, 87, 87);
+    color: white;
+}
+
+.customer-table > tbody {
+    text-shadow: none;
+    background-color: rgb(194, 194, 194);
+    color: black;
+}
+
+.customerdel , .customermod {
+    width: 0;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    border-radius: 0.7ch;
+}
+
+input {
+    padding: 1ch;
+    border-radius: 0.7ch;
+    font-weight: bold;
+}
+
+.customerdel > form > input {
+    background-color: red;
+    color: white;
+}
+
+.customermod > form > input {
+    background-color: green;
+    color: white;
+}

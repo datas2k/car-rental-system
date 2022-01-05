@@ -1,0 +1,92 @@
+.header-menu > li:nth-child(5) {
+    border: 2px solid red;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-shadow: -2px -2px 0px black, 2px 2px 0px black;
+    font-weight: bold;
+}
+
+.users-menu-container {
+    flex: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.users-menu {
+    list-style-type: none;
+    display: flex;
+    width: fit-content;
+    flex-flow: row wrap;
+    padding-top: 1ch;
+    padding: 0;
+    margin: 0;
+}
+
+.users-menu > li {
+    border-radius: 1ch;
+    border: 2px solid #082947;
+    background: linear-gradient(360deg, #444d4d 0%, #b2d7d5 100%);
+    width: fit-content;
+    padding: 2ch;
+    padding-top: 1ch;
+    padding-bottom: 1ch;
+    margin: 1ch;
+    margin-top: 0;
+}
+
+.users-main {
+    width: 100%;
+    display: flex;
+    text-align: left;
+}
+
+.users-table {
+    flex: none;
+    width: 100%;
+    text-align: left;
+    width: 90%;
+}
+
+td,th {
+    padding: 1ch;
+}
+
+.users-table > thead {
+    text-shadow: none;
+    height: 4ch;
+    background-color: rgb(87, 87, 87);
+    color: white;
+}
+
+.users-table > tbody {
+    text-shadow: none;
+    background-color: rgb(194, 194, 194);
+    color: black;
+}
+
+.userdel , .usermod {
+    width: 0;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    border-radius: 0.7ch;
+}
+
+input {
+    padding: 1ch;
+    border-radius: 0.7ch;
+    font-weight: bold;
+}
+
+.userdel > form > input {
+    background-color: red;
+    color: white;
+}
+
+.usermod > form > input {
+    background-color: green;
+    color: white;
+}

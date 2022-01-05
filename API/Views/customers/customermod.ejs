@@ -1,0 +1,24 @@
+<%- include('../app/header') %>
+<style>
+    .customermod-input {
+        font-size: large;
+        height: 4ch;
+    }
+    a {
+        font-size: large;
+        text-decoration: none;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px black;
+        color: white;
+    }
+</style>
+<form action="/customermod/<%=results[0].id%>" method="post">
+    <input class="customermod-input" type="text" name="name" placeholder="Ügyfél név" value="<%= results[0].name %>" required>
+    <input class="customermod-input" type="number" name="id_number" placeholder="Személyi szám" value="<%= results[0].id_number %>" required>
+    <input class="customermod-input" type="text" name="address" placeholder="Lakcím" value="<%= results[0].address %>" required>
+    <input class="customermod-input" type="submit" value="Módosít">
+</form>
+<br>
+<br>
+<a href="/customers">Vissza az ügyfelek listájára...</a>
+<%- include('../app/footer') %>

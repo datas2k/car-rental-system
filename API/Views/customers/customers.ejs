@@ -1,0 +1,46 @@
+<%- include('../app/header') %>
+        <style>
+            .header-menu > li:nth-child(2) {
+                border: 2px solid red;
+            }
+        </style>
+        <link rel="stylesheet" href="/css/customers.css">
+        <div class="customer-menu-container">
+            <ul class="customer-menu">
+                <li><a href="/addcustomer">Új ügyfél</a></li>
+            </ul>
+        </div>
+        <div class="customer-main">
+            <table class="customer-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Név</th>
+                        <th>Személyi szám</th>
+                        <th>Lakcím</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0; i<results.length; i++) { %>
+                        <tr>
+                            <td><%= results[i].id %></td>
+                            <td><%= results[i].name %></td>
+                            <td><%= results[i].id_number %></td>
+                            <td><%= results[i].address %></td>
+                            <td class="customerdel">
+                                <form action="/delcustomer/<%= results[0].id %>" method="post">
+                                    <input type="submit" value="Törlés !">
+                                </form>
+                            </td>
+                            <td class="customermod">
+                                <form action="/customermod/<%= results[0].id %>" method="get">
+                                    <input type="submit" value="Módosít.">
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <div class="customer-footer">Összesen: <%= results.length %> ügyfél.</div>
+<%- include('../app/footer') %>

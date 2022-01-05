@@ -1,0 +1,28 @@
+<%- include('header') %>
+    <h3>Új felhasználó felvétele</h3>
+    <hr>
+    <style>
+        .adduser-input {
+            font-size: large;
+            height: 4ch;
+        }
+        a {
+            font-size: large;
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px black;
+            color: white;
+        }
+    </style>
+    <form action="/adduser" method="post">
+        <input class="adduser-input" type="text" name="name" placeholder="Felhasználónév" required>
+        <input class="adduser-input" type="email" name="email" placeholder="E-mail cím" required>
+        <input class="adduser-input" type="password" name="pwd1" placeholder="Jelszó" required>
+        <input class="adduser-input" type="password" name="pwd2" placeholder="Jelszó megerősítése" required>
+        <input class="adduser-input" type="submit" value="Felvesz">
+    </form>
+    <br>
+    <br>
+    <a href="/users">Vissza a felhasználók listájára...</a>
+
+<%- include('footer') %>

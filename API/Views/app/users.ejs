@@ -1,0 +1,45 @@
+<%- include('header') %>
+        <link rel="stylesheet" href="/css/users.css">
+        <div class="users-menu-container">
+            <ul class="users-menu">
+                <li><a href="/adduser">Új felhasználó</a></li>
+            </ul>
+        </div>
+        <div class="users-main">
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Név</th>
+                        <th>E-mail</th>
+                        <th>Jelszó</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0; i<results.length; i++) { %>
+                        <tr>
+                            <td><%= results[i].id %></td>
+                            <td><%= results[i].name %></td>
+                            <td><%= results[i].email %></td>
+                            <td><%= results[i].password %></td>
+                            <td class="userdel">
+                                <form action="/deluser/<%= results[0].id %>" method="post">
+                                    <input type="submit" value="Törlés !">
+                                </form>
+                            </td>
+                            <td class="usermod">
+                                <form action="/usermod/<%= results[0].id %>" method="get">
+                                    <input type="submit" value="Módosít.">
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Összesen: <%= results.length %> felhasználó</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+<%- include('footer') %>
